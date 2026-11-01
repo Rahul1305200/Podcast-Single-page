@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Container for Recovery: Why the Room Matters More Than the Spa | YouMind Podcast</title>
+  <meta name="description" content="Keith Dickey, Sarah Walker and Wouter Dekker on designing hotel rooms around guest recovery — noise, HVAC, biometric data and the privacy questions that follow.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=41">
+  <link rel="stylesheet" href="podcast.css?v=7">
+</head>
+<body class="is-loading">
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+    <symbol id="icon-arrow-ne" viewBox="0 0 20 20">
+      <g transform="translate(10 10) rotate(-45) translate(-8.834 -7.226)">
+        <path fill="currentColor" d="M10.14 0.4C10.16 0.38 10.57 0.28 11.05 0.17C11.54 0.06 11.94 -0.02 11.95 0C11.96 0.02 12.01 0.36 12.06 0.76C12.17 1.54 12.44 2.47 12.73 3.04C13.62 4.84 15.23 6.03 17.17 6.34L17.67 6.41L17.67 7.21L17.67 8L17.22 8.08C14.28 8.57 12.36 10.77 12 14.06C11.98 14.28 11.95 14.45 11.94 14.45C11.84 14.45 10.2 14.05 10.16 14.02C10.14 14 10.16 13.8 10.2 13.58C10.68 11.1 12.04 9.09 13.81 8.25L14.23 8.04L5.51 8.03L0 8.02L0 6.41L5.53 6.4L14.22 6.39L13.69 6.12C12.3 5.41 11.2 4.03 10.55 2.18C10.37 1.65 10.09 0.45 10.14 0.4Z"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true" aria-label="Site menu">
+    <div class="mobile-drawer-head">
+      <a class="mobile-drawer-logo" href="./" aria-label="YouMind">
+        <img src="assets/065c9eb59e0f98fd.png" alt="YouMind">
+      </a>
+      <button class="mobile-drawer-close" id="drawerClose" type="button" aria-label="Close menu">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-drawer-body">
+      <a class="mobile-drawer-link" href="#">About Us</a>
+      <a class="mobile-drawer-link" href="#">Case Study</a>
+
+      <div class="mobile-acc">
+        <button type="button" class="mobile-drawer-link mobile-acc-toggle" aria-expanded="false" aria-controls="mobileSolPanel">
+          <span>Solutions</span>
+          <svg class="mobile-acc-chevron" width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.2l3.5 3.6 3.5-3.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="mobile-acc-panel" id="mobileSolPanel" hidden>
+          <a class="mobile-sub" href="#">
+            <span class="mobile-sub-ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/><path d="M3 12h18"/></svg>
+            </span>
+            <span>
+              <span class="mega-title">Corporate / Organizational</span>
+              <span class="mega-desc">Build resilience. Reduce burnout. Improve performance.</span>
+            </span>
+          </a>
+          <a class="mobile-sub" href="#">
+            <span class="mobile-sub-ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 7-4-14-3 7H2"/></svg>
+            </span>
+            <span>
+              <span class="mega-title">Elite Athletics</span>
+              <span class="mega-desc">Optimize readiness. Accelerate recovery. Protect performance.</span>
+            </span>
+          </a>
+          <a class="mobile-sub" href="#">
+            <span class="mobile-sub-ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v7a6 6 0 006 6 6 6 0 006-6V3"/><path d="M4 3h4M16 3h4"/><path d="M12 16v2a3 3 0 003 3"/><circle cx="18" cy="20" r="2"/></svg>
+            </span>
+            <span>
+              <span class="mega-title">Healthcare</span>
+              <span class="mega-desc">Build resilience. Reduce burnout. Improve performance.</span>
+            </span>
+          </a>
+          <a class="mobile-sub" href="#">
+            <span class="mobile-sub-ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3.5v5.8c0 4.6-3.2 8.8-8 9.7-4.8-.9-8-5.1-8-9.7V6.5L12 3z"/></svg>
+            </span>
+            <span>
+              <span class="mega-title">Tactical &amp; Defense</span>
+              <span class="mega-desc">Strengthen resilience. Support recovery under pressure.</span>
+            </span>
+          </a>
+          <a class="mobile-sub" href="#">
+            <span class="mobile-sub-ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v14"/><path d="M3 11h16a2 2 0 012 2v8"/><path d="M3 18h18"/><path d="M7 11V8a2 2 0 012-2h6a2 2 0 012 2v3"/></svg>
+            </span>
+            <span>
+              <span class="mega-title">Hospitality</span>
+              <span class="mega-desc">Enhance sleep. Elevate guest recovery.</span>
+            </span>
+          </a>
+          <a class="mobile-sub" href="#">
+            <span class="mobile-sub-ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 11a2 2 0 00-2 2c0 1.5-.15 3.4-.4 5"/><path d="M14 13c0 2.4-.15 5.6-1 8"/><path d="M9.2 13.2c-.25 2.2-.8 4.4-1.7 6.3"/><path d="M16.5 14.2c.2 1.8.15 4-.4 6"/><path d="M7.2 11.2a5 5 0 019.6 1.2"/><path d="M5 14.5a8 8 0 0114 1"/><path d="M4.5 18c-1 1.6-1.8 3-2.5 4"/><path d="M19.6 17.8c.7 1.5 1.2 2.8 1.4 4.2"/></svg>
+            </span>
+            <span>
+              <span class="mega-title">Personal / Bespoke</span>
+              <span class="mega-desc">Personalized protocols. Smarter focus. Better recovery.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mobile-acc">
+        <button type="button" class="mobile-drawer-link mobile-acc-toggle" aria-expanded="false" aria-controls="mobileSciPanel">
+          <span>The Science</span>
+          <svg class="mobile-acc-chevron" width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.2l3.5 3.6 3.5-3.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="mobile-acc-panel" id="mobileSciPanel" hidden>
+          <a class="mobile-sub" href="#">
+            <span class="mobile-sub-ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="7" height="11"/><rect x="14" y="6" width="7" height="15"/><path d="M6.5 14v2M6.5 7V4M17.5 10V7"/></svg>
+            </span>
+            <span>
+              <span class="mega-title">Organizational Performance</span>
+              <span class="mega-desc">Science behind workforce resilience and executive capacity.</span>
+            </span>
+          </a>
+          <a class="mobile-sub" href="#">
+            <span class="mobile-sub-ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.3 1.5 4.05 3 5.5l7 7z"/><path d="M3.2 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.3"/></svg>
+            </span>
+            <span>
+              <span class="mega-title">Hospitality and Healthcare</span>
+              <span class="mega-desc">Recovery protocols for guests, patients, and clinical teams.</span>
+            </span>
+          </a>
+          <a class="mobile-sub" href="#">
+            <span class="mobile-sub-ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3.5 3.5 0 00-3.4 4.2 4 4 0 00-2.1 6.6A3.5 3.5 0 009.5 21h5a3.5 3.5 0 002.9-5.2 4 4 0 00-2-6.6A3.5 3.5 0 0012 5z"/><path d="M12 5v16M9.5 10.5c.8.4 1.7.4 2.5 0M9.5 14c.8.4 1.7.4 2.5 0"/></svg>
+            </span>
+            <span>
+              <span class="mega-title">Personalized Brain Entrainment (Bespoke)</span>
+              <span class="mega-desc">Individual neurofunctional profiles and acoustic protocols.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a class="mobile-drawer-link" href="#">Testimonials</a>
+    </div>
+    <div class="mobile-drawer-foot">
+      <a class="btn-contact" href="#">
+        <span>Contact Us</span>
+        <span class="btn-contact-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+    </div>
+  </aside>
+
+  <div class="page">
+
+    <!-- HERO -->
+    <section class="hero post-hero pod-hero">
+      <div class="hero-deco" aria-hidden="true"></div>
+
+      <header class="nav-wrap">
+        <nav class="nav fade-el" id="siteNav" aria-label="Primary">
+          <a class="nav-logo" href="./" aria-label="YouMind">
+            <img src="assets/065c9eb59e0f98fd.png" alt="YouMind">
+          </a>
+          <button class="nav-menu-btn" id="navMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNavLinks">
+            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
+              <path d="M1 1h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+              <path d="M1 7h16" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+              <path d="M7 13h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <ul class="nav-links" id="siteNavLinks">
+            <li><a class="nav-link" href="#">About Us</a></li>
+            <li><a class="nav-link" href="#">Case Study</a></li>
+            <li class="nav-item has-mega" id="solTrigger">
+              <button class="nav-link nav-link--btn" type="button" aria-expanded="false" aria-controls="solMenu">
+                Solutions
+                <svg class="nav-chevron" width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.2l3.5 3.6 3.5-3.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="mega-menu" id="solMenu" role="menu" hidden>
+                <a class="mega-item" href="#" role="menuitem">
+                  <span class="mega-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/><path d="M3 12h18"/></svg>
+                  </span>
+                  <span>
+                    <span class="mega-title">Corporate / Organizational</span>
+                    <span class="mega-desc">Build resilience. Reduce burnout. Improve performance.</span>
+                  </span>
+                </a>
+                <a class="mega-item" href="#" role="menuitem">
+                  <span class="mega-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 7-4-14-3 7H2"/></svg>
+                  </span>
+                  <span>
+                    <span class="mega-title">Elite Athletics</span>
+                    <span class="mega-desc">Optimize readiness. Accelerate recovery. Protect performance.</span>
+                  </span>
+                </a>
+                <a class="mega-item" href="#" role="menuitem">
+                  <span class="mega-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v7a6 6 0 006 6 6 6 0 006-6V3"/><path d="M4 3h4M16 3h4"/><path d="M12 16v2a3 3 0 003 3"/><circle cx="18" cy="20" r="2"/></svg>
+                  </span>
+                  <span>
+                    <span class="mega-title">Healthcare</span>
+                    <span class="mega-desc">Build resilience. Reduce burnout. Improve performance.</span>
+                  </span>
+                </a>
+                <a class="mega-item" href="#" role="menuitem">
+                  <span class="mega-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3.5v5.8c0 4.6-3.2 8.8-8 9.7-4.8-.9-8-5.1-8-9.7V6.5L12 3z"/></svg>
+                  </span>
+                  <span>
+                    <span class="mega-title">Tactical &amp; Defense</span>
+                    <span class="mega-desc">Strengthen resilience. Support recovery under pressure.</span>
+                  </span>
+                </a>
+                <a class="mega-item" href="#" role="menuitem">
+                  <span class="mega-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v14"/><path d="M3 11h16a2 2 0 012 2v8"/><path d="M3 18h18"/><path d="M7 11V8a2 2 0 012-2h6a2 2 0 012 2v3"/></svg>
+                  </span>
+                  <span>
+                    <span class="mega-title">Hospitality</span>
+                    <span class="mega-desc">Enhance sleep. Elevate guest recovery.</span>
+                  </span>
+                </a>
+                <a class="mega-item" href="#" role="menuitem">
+                  <span class="mega-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 11a2 2 0 00-2 2c0 1.5-.15 3.4-.4 5"/><path d="M14 13c0 2.4-.15 5.6-1 8"/><path d="M9.2 13.2c-.25 2.2-.8 4.4-1.7 6.3"/><path d="M16.5 14.2c.2 1.8.15 4-.4 6"/><path d="M7.2 11.2a5 5 0 019.6 1.2"/><path d="M5 14.5a8 8 0 0114 1"/><path d="M4.5 18c-1 1.6-1.8 3-2.5 4"/><path d="M19.6 17.8c.7 1.5 1.2 2.8 1.4 4.2"/></svg>
+                  </span>
+                  <span>
+                    <span class="mega-title">Personal / Bespoke</span>
+                    <span class="mega-desc">Personalized protocols. Smarter focus. Better recovery.</span>
+                  </span>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item has-mega" id="sciTrigger">
+              <button class="nav-link nav-link--btn" type="button" aria-expanded="false" aria-controls="sciMenu">
+                The Science
+                <svg class="nav-chevron" width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.2l3.5 3.6 3.5-3.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="mega-menu mega-menu--science" id="sciMenu" role="menu" hidden>
+                <a class="mega-item" href="#" role="menuitem">
+                  <span class="mega-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="7" height="11"/><rect x="14" y="6" width="7" height="15"/><path d="M6.5 14v2M6.5 7V4M17.5 10V7"/></svg>
+                  </span>
+                  <span>
+                    <span class="mega-title">Organizational Performance</span>
+                    <span class="mega-desc">Science behind workforce resilience and executive capacity.</span>
+                  </span>
+                </a>
+                <a class="mega-item" href="#" role="menuitem">
+                  <span class="mega-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.3 1.5 4.05 3 5.5l7 7z"/><path d="M3.2 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.3"/></svg>
+                  </span>
+                  <span>
+                    <span class="mega-title">Hospitality and Healthcare</span>
+                    <span class="mega-desc">Recovery protocols for guests, patients, and clinical teams.</span>
+                  </span>
+                </a>
+                <a class="mega-item" href="#" role="menuitem">
+                  <span class="mega-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3.5 3.5 0 00-3.4 4.2 4 4 0 00-2.1 6.6A3.5 3.5 0 009.5 21h5a3.5 3.5 0 002.9-5.2 4 4 0 00-2-6.6A3.5 3.5 0 0012 5z"/><path d="M12 5v16M9.5 10.5c.8.4 1.7.4 2.5 0M9.5 14c.8.4 1.7.4 2.5 0"/></svg>
+                  </span>
+                  <span>
+                    <span class="mega-title">Personalized Brain Entrainment (Bespoke)</span>
+                    <span class="mega-desc">Individual neurofunctional profiles and acoustic protocols.</span>
+                  </span>
+                </a>
+              </div>
+            </li>
+            <li><a class="nav-link" href="#">Testimonials</a></li>
+          </ul>
+          <a class="btn-contact fade-el" href="#">
+            <span>Contact Us</span>
+            <span class="btn-contact-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </nav>
+      </header>
+
+      <div class="pod-hero-copy">
+        <h1 class="fade-el">Container for Recovery: Why the Room Matters More Than the Spa</h1>
+        <div class="pod-tags fade-el" aria-label="Topics">
+          <a class="pod-tag" href="#">hospitality</a>
+          <a class="pod-tag" href="#">guest recovery</a>
+          <a class="pod-tag" href="#">acoustics</a>
+          <a class="pod-tag" href="#">health data</a>
+        </div>
+      </div>
+
+      <div class="pod-feature fade-el">
+        <div class="pod-stage" id="podStage"
+             data-embed="https://www.youtube.com/embed/vwNGZprW5uo?rel=0&amp;modestbranding=1">
+          <img src="https://img.youtube.com/vi/vwNGZprW5uo/maxresdefault.jpg"
+               alt="Keith Dickey, Sarah Walker and Wouter Dekker in conversation"
+               width="1280" height="720" decoding="async">
+          <button type="button" class="pod-play" id="podPlay"
+                  aria-label="Play: Container for Recovery: Why the Room Matters More Than the Spa">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" aria-hidden="true">
+              <circle cx="36" cy="36" r="36" fill="#ffffff" fill-opacity="0.92"></circle>
+              <path d="M30 22.5V49.5L52.5 36L30 22.5Z" fill="#199A91"></path>
+            </svg>
+          </button>
+          <span class="pod-stamp">01:04:38</span>
+        </div>
+      </div>
+
+      <div class="pod-listen fade-el">
+        <span class="pod-listen-label">Also on</span>
+        <a class="pod-pill" href="#">Apple Podcasts</a>
+        <a class="pod-pill" href="#">Spotify</a>
+        <a class="pod-pill" href="#">YouTube</a>
+      </div>
+    </section>
+
+    <!-- ARTICLE -->
+    <section class="pod-article">
+      <div class="pod-article-inner">
+
+        <aside class="pod-toc" id="podToc">
+          <p class="pod-toc-label">In this episode</p>
+          <nav aria-label="On this page">
+            <ol class="pod-toc-list">
+              <li><a href="#covers"><span>01</span> What this episode covers</a></li>
+              <li><a href="#chapters"><span>02</span> Chapters</a></li>
+              <li><a href="#guests"><span>03</span> Guests</a></li>
+              <li><a href="#transcript"><span>04</span> Transcript</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <div class="pod-main">
+
+          <p class="pod-lead fade-el">Hotel rooms should be designed around guest recovery, not just
+            appearance. Keith Dickey, Sarah Walker and Wouter Dekker explore how spaces affect the nervous
+            system, why noise and HVAC decisions deserve wellness input, the limits of biometric data in
+            hospitality, and the privacy questions that come with handling health data.</p>
+
+          <p class="pod-byline fade-el">Recorded with Future of Hospitality &middot;
+            <time datetime="2026-10-14">14 October 2026</time> &middot; 1 hr 4 min</p>
+
+          <article class="pod-section fade-el" id="covers">
+            <h2>What this episode covers</h2>
+            <p>A guest spends forty minutes in the spa and eight hours in the room. The conversation starts
+              there, and keeps returning to the decisions nobody reviews.</p>
+            <ul>
+              <li>Why the guest room, not the spa, decides whether someone actually recovers.</li>
+              <li>How noise and HVAC choices reach the nervous system long before anyone notices them.</li>
+              <li>What biometric data can and cannot tell a hotel about a guest.</li>
+              <li>The privacy line that handling health data draws across hospitality.</li>
+              <li>Where wellness belongs in a design brief, and who has to sign it off.</li>
+            </ul>
+          </article>
+
+          <article class="pod-section fade-el" id="chapters">
+            <h2>Chapters</h2>
+            <p>Every timestamp opens the player at that point.</p>
+            <ol class="pod-chapters">
+              <li><button type="button" data-t="0"><span class="pod-t">00:00</span><span>Why the room matters more than the spa</span></button></li>
+              <li><button type="button" data-t="412"><span class="pod-t">06:52</span><span>What a nervous system notices in a space</span></button></li>
+              <li><button type="button" data-t="1105"><span class="pod-t">18:25</span><span>Noise, HVAC and the decisions nobody reviews</span></button></li>
+              <li><button type="button" data-t="1980"><span class="pod-t">33:00</span><span>Biometric data and its limits in hospitality</span></button></li>
+              <li><button type="button" data-t="2760"><span class="pod-t">46:00</span><span>Health data, privacy and who carries the risk</span></button></li>
+              <li><button type="button" data-t="3425"><span class="pod-t">57:05</span><span>Where wellness enters the design brief</span></button></li>
+            </ol>
+          </article>
+
+          <article class="pod-section fade-el" id="guests">
+            <h2>Guests</h2>
+            <p>Three people who argue about the same building from different sides of it.</p>
+            <ul class="pod-guests">
+              <li>
+                <span class="pod-avatar" aria-hidden="true">KD</span>
+                <span class="pod-guest-copy">
+                  <span class="pod-guest-name">Keith Dickey</span>
+                  <span class="pod-guest-role">Hospitality wellness strategist</span>
+                </span>
+                <a class="pod-guest-link" href="#" aria-label="Keith Dickey on LinkedIn">
+                  <svg class="icon-arrow-ne" width="16" height="16" aria-hidden="true"><use href="#icon-arrow-ne"></use></svg>
+                </a>
+              </li>
+              <li>
+                <span class="pod-avatar" aria-hidden="true">SW</span>
+                <span class="pod-guest-copy">
+                  <span class="pod-guest-name">Sarah Walker</span>
+                  <span class="pod-guest-role">Guest experience and design research</span>
+                </span>
+                <a class="pod-guest-link" href="#" aria-label="Sarah Walker on LinkedIn">
+                  <svg class="icon-arrow-ne" width="16" height="16" aria-hidden="true"><use href="#icon-arrow-ne"></use></svg>
+                </a>
+              </li>
+              <li>
+                <span class="pod-avatar" aria-hidden="true">WD</span>
+                <span class="pod-guest-copy">
+                  <span class="pod-guest-name">Wouter Dekker</span>
+                  <span class="pod-guest-role">Building systems and acoustics</span>
+                </span>
+                <a class="pod-guest-link" href="#" aria-label="Wouter Dekker on LinkedIn">
+                  <svg class="icon-arrow-ne" width="16" height="16" aria-hidden="true"><use href="#icon-arrow-ne"></use></svg>
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="pod-section fade-el" id="transcript">
+            <h2>Transcript</h2>
+            <p>The full conversation, lightly edited for readability.</p>
+            <button type="button" class="pod-pill pod-transcript-toggle" id="transcriptToggle"
+                    aria-expanded="false" aria-controls="transcriptPanel">Show transcript</button>
+            <div class="pod-transcript" id="transcriptPanel" hidden>
+              <p><span class="pod-speaker">Keith Dickey</span>The thing we keep coming back to is that a guest spends maybe forty minutes in a spa and eight hours in a room. The room is doing the work, whether or not anyone designed it to.</p>
+              <p><span class="pod-speaker">Sarah Walker</span>And it is doing that work invisibly. Nobody checks out and says the air handling unit cycled too often. They say they slept badly.</p>
+              <p><span class="pod-speaker">Wouter Dekker</span>Which is the problem, because the people specifying that equipment are optimising for cost and capacity. Nobody in that conversation is asked what it sounds like at three in the morning.</p>
+              <p><span class="pod-speaker">Keith Dickey</span>So the question becomes who owns recovery in the building. Right now it is nobody, and that is why it keeps falling off the brief.</p>
+            </div>
+          </article>
+
+          <div class="pod-meta fade-el">
+            <div class="pod-share">
+              <p>Share this episode</p>
+              <div class="pod-share-links">
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on X">X</a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">in</a>
+                <a href="#" aria-label="Share by email">@</a>
+              </div>
+            </div>
+            <div class="pod-byline-card">
+              <span class="pod-byline-avatar" aria-hidden="true">YM</span>
+              <div>
+                <strong>YouMind Research Team</strong>
+                <span class="pod-byline-role">Neuroacoustic insights</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MORE -->
+    <section class="pod-more">
+      <div class="pod-more-inner">
+        <h2 class="fade-el">More episodes</h2>
+        <div class="pod-grid">
+
+          <article class="pod-card fade-el">
+            <a class="pod-card-thumb" href="#">
+              <img src="https://youmind.org/wp-content/uploads/2026/10/thumbnail.jpg" alt="" width="512" height="292" loading="lazy" decoding="async">
+              <span class="pod-stamp">01:04:38</span>
+            </a>
+            <h3><a href="#">Why Your Brain Never Truly Shuts Down at Night</a></h3>
+            <p>The first night effect, why your brain stays semi-conscious, and what that quietly costs under pressure.</p>
+          </article>
+
+          <article class="pod-card fade-el">
+            <a class="pod-card-thumb" href="#">
+              <img src="https://youmind.org/wp-content/uploads/2026/10/320Miles.NoSleep.-.webp" alt="" width="512" height="292" loading="lazy" decoding="async">
+              <span class="pod-stamp">57:39</span>
+            </a>
+            <h3><a href="#">320 Miles. No Sleep. No Support. One Tiny Boat.</a></h3>
+            <p>Yasin Darkhaoui goes back to the ocean to break the world laser sailing distance record, alone and non-stop.</p>
+          </article>
+
+          <article class="pod-card fade-el">
+            <a class="pod-card-thumb" href="#">
+              <img src="https://youmind.org/wp-content/uploads/2026/10/BRAINPERFORMANCE1.webp" alt="" width="512" height="292" loading="lazy" decoding="async">
+              <span class="pod-stamp">57:39</span>
+            </a>
+            <h3><a href="#">Why Your Brain Is Holding Your Body Back</a></h3>
+            <p>The neuroscience of sound, mindset and human performance, with a three-time world sailing champion.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <img class="footer-logo" src="assets/065c9eb59e0f98fd.png" alt="YouMind">
+            <p>YouMind delivers science-backed neuro-acoustic protocols that help organizations</p>
+          </div>
+          <div class="footer-col">
+            <h4>COMPANY</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>RESOURCES</h4>
+            <ul>
+              <li><a href="#">Insights</a></li>
+              <li><a href="#">Science</a></li>
+              <li><a href="#">Frameworks</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Solution</h4>
+            <ul>
+              <li><a href="#">Personal</a></li>
+              <li><a href="#">Hospitality</a></li>
+              <li><a href="#">Healthcare</a></li>
+              <li><a href="#">Corporate</a></li>
+              <li><a href="#">Defense</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copy">© 2026 YouMind®. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    /* Fade-in on first scroll into view (elements only, once) */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const targets = () => document.querySelectorAll('.fade-el, .blog-card, .approach-copy > *, .btn-explore, .approach-card, .footer-brand, .footer-col, .footer-bottom');
+
+      function mark(el) {
+        if (el.classList.contains('is-inview')) return;
+        el.classList.add('fade-el', 'is-inview');
+      }
+
+      function observe(nodes) {
+        const list = Array.from(nodes);
+        if (reduce || !('IntersectionObserver' in window)) {
+          list.forEach(mark);
+          window.__observeFade = (extra) => extra.forEach(mark);
+          return;
+        }
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            mark(entry.target);
+            io.unobserve(entry.target);
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        const watch = (el) => {
+          el.classList.add('fade-el');
+          if (!el.classList.contains('is-inview')) io.observe(el);
+        };
+        list.forEach(watch);
+        window.__observeFade = (extra) => extra.forEach(watch);
+      }
+
+      observe(targets());
+      document.body.classList.remove('is-loading');
+      document.body.classList.add('is-ready');
+    })();
+
+    /* Mega menus: Solutions + The Science — only one open at a time */
+    (function () {
+      const nav = document.getElementById('siteNav');
+      if (!nav) return;
+      const isCompactNav = () => window.matchMedia('(max-width: 900px)').matches;
+      const megas = [];
+
+      function closeAllExcept(keep) {
+        megas.forEach((m) => {
+          if (m !== keep) m.closeNow();
+        });
+      }
+
+      function wireMega(triggerId, menuId) {
+        const trigger = document.getElementById(triggerId);
+        const menu = document.getElementById(menuId);
+        const btn = trigger && trigger.querySelector('.nav-link--btn');
+        if (!trigger || !menu || !btn) return;
+        let closeTimer;
+        const api = { closeNow: () => {} };
+
+        const place = () => {
+          if (isCompactNav()) {
+            menu.style.top = '';
+            menu.style.left = '';
+            menu.style.right = '';
+            return;
+          }
+          const navRect = nav.getBoundingClientRect();
+          const trigRect = trigger.getBoundingClientRect();
+          menu.style.top = (navRect.bottom - trigRect.top + 16) + 'px';
+          menu.style.left = '50%';
+          menu.style.right = 'auto';
+        };
+
+        const closeNow = () => {
+          clearTimeout(closeTimer);
+          trigger.classList.remove('is-open');
+          btn.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+          menu.classList.remove('is-open');
+        };
+        api.closeNow = closeNow;
+
+        const open = () => {
+          if (isCompactNav()) return;
+          clearTimeout(closeTimer);
+          closeAllExcept(api);
+          place();
+          menu.hidden = false;
+          trigger.classList.add('is-open');
+          btn.classList.add('is-open');
+          btn.setAttribute('aria-expanded', 'true');
+          menu.classList.add('is-open');
+        };
+        const closeSoon = () => {
+          clearTimeout(closeTimer);
+          closeTimer = setTimeout(closeNow, 80);
+        };
+
+        trigger.addEventListener('mouseenter', () => { if (!isCompactNav()) open(); });
+        trigger.addEventListener('mouseleave', () => { if (!isCompactNav()) closeSoon(); });
+        menu.addEventListener('mouseenter', () => { if (!isCompactNav()) open(); });
+        menu.addEventListener('mouseleave', () => { if (!isCompactNav()) closeSoon(); });
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          if (isCompactNav()) return;
+          if (trigger.classList.contains('is-open')) closeNow();
+          else open();
+        });
+        window.addEventListener('resize', () => {
+          if (isCompactNav()) {
+            menu.style.top = '';
+            menu.style.left = '';
+            closeNow();
+          } else if (trigger.classList.contains('is-open')) {
+            place();
+          }
+        });
+
+        megas.push(api);
+      }
+
+      wireMega('solTrigger', 'solMenu');
+      wireMega('sciTrigger', 'sciMenu');
+    })();
+
+    /* Mobile / tablet drawer */
+    (function () {
+      const openBtn = document.getElementById('navMenuBtn');
+      const closeBtn = document.getElementById('drawerClose');
+      const drawer = document.getElementById('mobileDrawer');
+      const backdrop = document.getElementById('drawerBackdrop');
+      if (!openBtn || !drawer || !backdrop) return;
+
+      const accordionItems = Array.from(drawer.querySelectorAll('.mobile-acc'));
+
+      const setAccOpen = (item, open) => {
+        const btn = item.querySelector('.mobile-acc-toggle');
+        const panel = item.querySelector('.mobile-acc-panel');
+        if (!btn || !panel) return;
+        item.classList.toggle('is-open', open);
+        btn.setAttribute('aria-expanded', String(open));
+        panel.hidden = !open;
+      };
+
+      const collapseAll = () => accordionItems.forEach((item) => setAccOpen(item, false));
+
+      accordionItems.forEach((item) => {
+        const btn = item.querySelector('.mobile-acc-toggle');
+        if (!btn) return;
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const willOpen = !item.classList.contains('is-open');
+          accordionItems.forEach((other) => setAccOpen(other, other === item && willOpen));
+        });
+      });
+
+      const setOpen = (open) => {
+        document.body.classList.toggle('drawer-open', open);
+        drawer.classList.toggle('is-open', open);
+        drawer.setAttribute('aria-hidden', String(!open));
+        backdrop.hidden = !open;
+        openBtn.setAttribute('aria-expanded', String(open));
+        openBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        if (!open) collapseAll();
+      };
+
+      openBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setOpen(!drawer.classList.contains('is-open'));
+      });
+      closeBtn && closeBtn.addEventListener('click', () => setOpen(false));
+      backdrop.addEventListener('click', () => setOpen(false));
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setOpen(false);
+      });
+      window.addEventListener('resize', () => {
+        if (window.matchMedia('(min-width: 901px)').matches) setOpen(false);
+      });
+    })();
+
+    /* Player: facade until asked, then a real iframe. Chapters seek it. */
+    (function () {
+      const stage = document.getElementById('podStage');
+      if (!stage) return;
+      const base = stage.getAttribute('data-embed');
+      let frame = null;
+
+      function load(seconds) {
+        const start = seconds ? '&start=' + seconds : '';
+        if (!frame) {
+          frame = document.createElement('iframe');
+          frame.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture');
+          frame.setAttribute('allowfullscreen', '');
+          frame.setAttribute('title', 'Container for Recovery: Why the Room Matters More Than the Spa');
+          stage.classList.add('is-playing');
+          stage.appendChild(frame);
+        }
+        frame.src = base + '&autoplay=1' + start;
+      }
+
+      document.getElementById('podPlay').addEventListener('click', () => load(0));
+
+      document.querySelectorAll('.pod-chapters button').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          load(parseInt(btn.getAttribute('data-t'), 10) || 0);
+          stage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      });
+    })();
+
+    /* Transcript disclosure */
+    (function () {
+      const btn = document.getElementById('transcriptToggle');
+      const panel = document.getElementById('transcriptPanel');
+      if (!btn || !panel) return;
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        btn.textContent = open ? 'Show transcript' : 'Hide transcript';
+        panel.hidden = open;
+      });
+    })();
+
+    /* Aside TOC scrollspy */
+    (function () {
+      const toc = document.getElementById('podToc');
+      if (!toc) return;
+      const links = Array.from(toc.querySelectorAll('a'));
+      const sections = links
+        .map((a) => document.querySelector(a.getAttribute('href')))
+        .filter(Boolean);
+      if (!sections.length) return;
+
+      function update() {
+        const line = window.scrollY + window.innerHeight * 0.3;
+        let active = 0;
+        sections.forEach((s, i) => {
+          if (s.getBoundingClientRect().top + window.scrollY <= line) active = i;
+        });
+        links.forEach((a, i) => a.classList.toggle('is-active', i === active));
+      }
+
+      links.forEach((a) => {
+        a.addEventListener('click', (e) => {
+          const target = document.querySelector(a.getAttribute('href'));
+          if (!target) return;
+          e.preventDefault();
+          window.scrollTo({
+            top: target.getBoundingClientRect().top + window.scrollY - 96,
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
+
+    /* Reveal */
+    window.addEventListener('load', () => document.body.classList.remove('is-loading'));
+  </script>
+</body>
+</html>
